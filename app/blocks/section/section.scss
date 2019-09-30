@@ -1,0 +1,29 @@
+.section {
+  $b: &;
+
+  display: block;
+  width: 100%;
+
+  &__title {
+    @include header-2;
+
+    &_sm {
+
+      &-white {
+        @include screen('sm') {
+          color: $color-white;
+        }
+      }
+
+      &-abs {
+        @include screen('sm') {
+
+        }
+      }
+
+      &_small {
+        @include header-2-sm30;
+      }
+    }
+  }
+}

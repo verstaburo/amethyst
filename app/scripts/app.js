@@ -2,6 +2,7 @@
 import svg4everybody from 'svg4everybody';
 import objectFitImages from 'object-fit-images';
 import './globalOptions';
+import './vhfix';
 import anchor from '../blocks/js-functions/anchor';
 import scrollAnimation from '../blocks/js-functions/scroll-animation';
 // import { selects, sliders, datepicker, inputmask, numberinput } from '../blocks/form/form';

@@ -1,7 +1,48 @@
 extends ../../layouts/default
 
 block head
-  - var pageTitle = Amethyst + ' | Главная'
+  - var pageTitle = Amethyst + ' | Main'
+
+block header
+  - var headerDark = false
+  - var noFooter = true
 
 block content
-  p Страница: index
+  +navigation
+  +lead#about
+  +section._service#services
+    .container
+      .container_inner
+        +section-title Amethyst Services
+        +section-content._grid.content-zone
+          ol
+            li
+              h3 Charter Sales and Brokerage
+              p We are happy to offer you hand-picked private flights to and from any destination. Our charter experts are available 24/7 to cater your every need from getting all the necessary permissions in the shortest period of time to making last-minute schedule changes. Exceeding your highest expectations is our unchanged principle, and personal comfort of each passenger remains our top priority. With great attention to every detail, we offer an extensive selection of private jets as well as guide services, VIP transportation, and on-board catering from the best restaurants in the world
+            li
+              h3 Aircraft Sales and Acquisitions
+              p Whether you are buying or selling a private jet we have an experienced team of experts ready to make all the complex transactions smooth and easy for you. We can help you not only successfully navigate the legal, technical, and fiscal matters but also provide engineering support and crewing. From finding the best aircraft to staff hire, our experienced team has extensive knowledge to take care of it.
+            li
+              h3 Aircraft Management
+              p Our aircraft management services are designed help you enjoy the full potential of aircraft ownership. From financial and administrative part of it, to highly qualified staff recruitment, hiring and training, to looking after all of the associated maintenance work, we will ensure the safe and efficient operation of your aircraft.
+            li
+              h3 Aviation Consulting
+              p Our teams theoretical knowledge combined with long-term practical experience to offer you bespoke solutions in the field of aviation consulting. From business analysis to audit of the flight operations; to comprehensive technical aircraft audits and strategy development, you can trust us our unique perspective.
+  +section._history#history
+    +card.__card
+    .container
+      +e.wrapper
+        .container_inner
+          +section-title._sm-white._sm-abs Amethyst Jet solutions 1927 Ltd
+          +section-content.content-zone
+            p Our company’s name is featuring a very special date in aviation’s history. In 1927 Charles Lindbergh, an American aviator, military officer, author, inventor, explorer, and environmental activist became the first man to successfully fly an airplane across the Atlantic Ocean. As for amethyst, this gemstone is known for creating a strong sense of wellbeing and often is synonymous with luxury.
+            p Amethyst’s powerful qualities such as balance, clarity and protection in combination with luxury and stability, speak to our core values: we provide a world-class service without hidden fees. From private charter flights to aircraft support, we are holding your back.
+            p One of company’s greatest assets is our highly experienced team with outstanding expertise in various aviation sectors, working hard to provide you with full customer satisfaction.
+          +section-content
+            +e.question You and your business are unique, so why settle for anything less than a bespoke tailored service from your aviation company?
+  +section._contacts#contacts
+    .container
+      .container_inner
+        +section-title._sm-small Contacts
+        +section-content
+          +contacts

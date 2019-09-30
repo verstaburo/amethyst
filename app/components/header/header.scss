@@ -1,0 +1,97 @@
+.header {
+  $b: &;
+
+  display: block;
+  color: $color-white;
+  box-sizing: border-box;
+  width: 100%;
+
+  @include rule(padding-top, (xl: 3.49vw, lg: 4.9vw, md: 6.7vw, sm: calc(var(--vh, 1vh) * 3.74)));
+  @include rule(padding-bottom, (xl: 3.49vw, lg: 4.9vw, md: 6.7vw, sm: calc(var(--vh, 1vh) * 3.74)));
+
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &__image {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    width: auto;
+
+    @include rule(height, (xl: 4.17vw, lg: 5.86vw, md: 8vw, sm: 12vw));
+    @include rule(margin-bottom, (xl: -1.35vw, lg: -1.9vw, md: -2.6vw, sm: 0));
+  }
+
+  &__slogan {
+    position: relative;
+    display: inline-block;
+    color: currentColor;
+    font-family: $font-header;
+
+    @include text-big;
+
+    &::before {
+      @include pseudo;
+      @include rule(height, (xl: 6.3vw, lg: 8.86vw, md: 12.1vw, sm: calc(var(--vh, 1vh) * .15)));
+      @include rule(width, (xl: .052vw, lg: .073vw, md: .1vw, sm: 8vw));
+      @include rule(left, (xl: -2.55vw, lg: -3.59vw, md: -4.9vw, sm: 0));
+      @include rule(bottom, (xl: .6em, sm: calc(var(--vh, 1vh) * -4.34)));
+
+      background-color: $color-white;
+      opacity: .33;
+
+      #{$b}_dark & {
+        background-color: $color-basic;
+      }
+    }
+
+    &:not(:first-child) {
+      @include rule(margin-left, (xl: 7.55vw, lg: 10.61vw, md: 14.5vw, sm: 0));
+    }
+
+    #{$b}_dark & {
+      @include text-big-xl16;
+    }
+  }
+
+  &__page {
+    box-sizing: border-box;
+    background-color: $color-white;
+    color: $color-dark;
+
+    @include text-mid;
+    @include rule(padding, (xl: 0 .104vw, lg: 0 .146vw, md: 0 .2vw, sm: .533vw));
+    @include rule(display, (xl: inline-block, md: none));
+
+    &:not(:first-child) {
+      margin-left: auto;
+    }
+
+    #{$b}_dark & {
+      background-color: $color-dark;
+      color: $color-white;
+    }
+  }
+
+  &_dark {
+    color: $color-dark;
+  }
+
+  &_abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+}

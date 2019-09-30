@@ -1,0 +1,19 @@
+mixin navigation()
+  +b.navigation&attributes(attributes)
+    block
+    
+mixin ui-kit-navigation()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент navigation
+      +ui-path
+        p Компонент: components/navigation/navigation
+      +ui-description
+        p Описание компонента
+  
+    +ui-section-content()
+      +navigation
+      
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

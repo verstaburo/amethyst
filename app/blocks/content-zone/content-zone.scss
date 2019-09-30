@@ -12,14 +12,26 @@
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 30px;
-    line-height: 1.5;
+  h1 {
+    @include header-1;
+
+    font-weight: 400;
+  }
+
+  h2 {
+    @include header-2;
+
+    font-weight: 400;
+  }
+
+  h3, h4, h5, h6 {
+    @include header-3;
+
+    font-weight: 700;
   }
 
   p {
-    font-size: 16px;
-    line-height: 1.5;
+    @include text;
 
     &:not(:first-child) {
       margin-top: 10px;
@@ -27,7 +39,8 @@
 
     small {
       display: block;
-      font-size: 12px;
+
+      @include text-small;
     }
   }
 
@@ -74,8 +87,7 @@
   }
 
   ul, ol {
-    font-size: 14px;
-    line-height: 1.5;
+    @include text;
 
     &:not(:first-child) {
       margin-top: 30px;
@@ -86,7 +98,6 @@
     }
 
     li {
-      padding-left: 20px;
       position: relative;
     }
   }
@@ -107,14 +118,59 @@
   ol {
     counter-reset: list1;
 
+    ol {
+      counter-reset: list2;
+
+      ol {
+        counter-reset: list3;
+      }
+    }
+
     li {
+      position: relative;
 
       &::before {
         position: absolute;
-        left: 0;
+        display: inline-block;
+        right: 0;
         top: 0;
         counter-increment: list1;
-        content: counter(list1) '.';
+        content: counter(list1, decimal-leading-zero);
+        color: $color-markers;
+        font-weight: 700;
+
+        @include rule(right, (xl: calc(100% + 2.08vw), lg: calc(100% + 2.93vw), md: 0));
+        @include rule(display, (xl: inline-block, md: block));
+        @include rule(position, (xl: absolute, md: static));
+        @include text-small;
+      }
+
+      ol li {
+
+        &::before {
+          position: static;
+          display: inline-block;
+          counter-increment: list2;
+          content: counter(list1) '.' counter(list2) '. ';
+          color: $color-basic;
+          font-weight: 400;
+
+          @include text;
+        }
+      }
+
+      li ol li {
+
+        &::before {
+          position: static;
+          display: inline-block;
+          counter-increment: list3;
+          content: counter(list1) '.' counter(list2) '.' counter(list3) '. ';
+          color: $color-basic;
+          font-weight: 400;
+
+          @include text;
+        }
       }
     }
   }

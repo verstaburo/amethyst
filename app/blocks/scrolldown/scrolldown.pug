@@ -1,0 +1,19 @@
+mixin scrolldown()
+  +b.scrolldown&attributes(attributes)
+    block
+    
+mixin ui-kit-scrolldown()
+  +ui-section
+    +ui-section-head
+      +ui-title Блок scrolldown
+      +ui-path
+        p Блок: blocks/scrolldown/scrolldown
+      +ui-description
+        p Описание Блока
+  
+    +ui-section-content()
+      +scrolldown
+      
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

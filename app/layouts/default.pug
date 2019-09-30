@@ -2,9 +2,20 @@ include _externalIncludes
 include _internalIncludes
 
 doctype html
-html(lang='ru')
+html(lang='en')
   include head
   body
-    block content
+    block header
+    - var hdc = headerDark || false
+    - var isFooter = noFooter || true
+    - var pg = currpage || ''
+    if hdc
+      +header-dark(pg)
+    else
+      +header._abs(pg)
+    main.page
+      block content
+    if isFooter
+      +footer
     script(src='assets/scripts/app.min.js')
-    script(src='assets/scripts/main.js')
+    //- script(src='assets/scripts/main.js')

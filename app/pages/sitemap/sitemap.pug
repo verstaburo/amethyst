@@ -1,10 +1,15 @@
 extends ../../layouts/default
 
 block head
-  - var pageTitle = Amethyst + ' | Карта верстки'
+  - var pageTitle = Amethyst + ' | Map'
+
+block header
+  - var headerDark = true
+  - var noFooter = false
 
 block content
   +b.sitemap
     .container
       +e.A.link(href="ui-kit.html") UI-kit (ui-kit.html)
-      +e.A.link(href="index.html") Главная (index.html)
+      +e.A.link(href="index.html") Main (index.html)
+      +e.A.link(href="policy.html") Privacy policy (policy.html)

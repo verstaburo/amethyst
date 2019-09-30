@@ -1,0 +1,30 @@
+mixin contacts()
+  +b.contacts&attributes(attributes)
+    +e.address Arch. Makariou III, 155, Proteas House, 5th floor, 3026, Limassol, Cyprus
+    +e.communications
+      +e.item
+        +e.name Phone:
+        +e.links
+          +link().__link(href="tel:+35725057219") +357 250 57 219
+      +e.item
+        +e.name.hide-sm Mail:
+        +e.links
+          +link()._purple.__link(href="mailto:vr@amethystjet.net") vr@amethystjet.net
+          +link()._purple.__link(href="mailto:info@amethystjet.net") info@amethystjet.net
+    block
+
+mixin ui-kit-contacts()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент contacts
+      +ui-path
+        p Компонент: components/contacts/contacts
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +contacts
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()
