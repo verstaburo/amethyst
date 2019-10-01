@@ -14,13 +14,13 @@
 </head>
 
 <body>
+    <header class="header header_abs" pg="pg">
+        <div class="container">
+            <div class="header__logo"><img class="header__image" src="assets/images/logo.svg" alt="" role="presentation" /></div>
+            <div class="header__slogan">Your business aviation insider</div>
+        </div>
+    </header>
     <main class="page" role="main">
-        <header class="header header_abs" pg="pg">
-            <div class="container">
-                <div class="header__logo"><img class="header__image" src="assets/images/logo.svg" alt="" role="presentation" /></div>
-                <div class="header__slogan">Your business aviation insider</div>
-            </div>
-        </header>
         <script>
             $(window).on('load', function() {
                 $('.ui-kit__section').each(function(i) {
@@ -374,15 +374,20 @@
                 <div class="ui-kit__section-content">
                     <div class="container">
                         <section class="lead">
-                            <div class="lead__layer lead__layer_back4"><img class="lead__image" src="assets/images/parallax-layer-4.jpg" alt="" role="presentation" /></div>
-                            <div class="lead__layer lead__layer_back3"><img class="lead__image" src="assets/images/parallax-layer-3.png" alt="" role="presentation" /></div>
-                            <div class="lead__layer lead__layer_back2"><img class="lead__image" src="assets/images/parallax-layer-2.png" alt="" role="presentation" /></div>
-                            <div class="lead__layer lead__layer_back1"><img class="lead__image" src="assets/images/parallax-layer-1.png" alt="" role="presentation" /></div>
+                            <div class="lead__layer lead__layer_back4" smooth-parallax="smooth-parallax" start-position-y="0" end-position-y="1.7"><img class="lead__image" src="assets/images/parallax-layer-4.jpg" alt="" role="presentation" /></div>
+                            <div class="lead__layer lead__layer_back3" smooth-parallax="smooth-parallax" start-position-y="0" end-position-y="1.5"><img class="lead__image" src="assets/images/parallax-layer-3.png" alt="" role="presentation" /></div>
+                            <div class="lead__layer lead__layer_back2" smooth-parallax="smooth-parallax" start-position-y="0" end-position-y="1.3"><img class="lead__image" src="assets/images/parallax-layer-2.png" alt="" role="presentation" /></div>
+                            <div class="lead__layer lead__layer_back1" smooth-parallax="smooth-parallax" start-position-y="0" end-position-y="1.1"><img class="lead__image" src="assets/images/parallax-layer-1.png" alt="" role="presentation" /></div>
                             <div class="lead__layer lead__layer_base">
                                 <div class="container">
-                                    <div class="container_inner">
-                                        <h1 class="lead__title">Consistent impeccable round-the-clock service</h1>
-                                        <div class="lead__text">We reliably deliver delightful customer experience in the civil business aviation industry specializing in such services as aircraft sales and acquisitions, aircraft management, charter sales and aviation consulting.</div><a class="scrolldown js-anchor" href="#services">Scroll down for more</a>
+                                    <div class="container container_inner">
+                                        <h1 class="lead__title">Consistent impeccable round&#8209;the&#8209;clock service</h1>
+                                        <div class="lead__text">We reliably deliver delightful customer experience in the civil business aviation industry specializing in such services as aircraft sales and acquisitions, aircraft management, charter sales and aviation consulting.</div>
+                                    </div>
+                                </div>
+                                <div class="scrolldown lead__scrolldown">
+                                    <div class="container">
+                                        <div class="container container_inner"><a class="scrolldown__link js-anchor" href="#services"><span class="scrolldown__circle"><svg class="scrolldown__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></span><span class="scrolldown__text">Scroll down for more</span></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -465,7 +470,8 @@
                 <div class="ui-kit__section-content">
                     <div class="container">
                         <figure class="card">
-                            <figcaption class="card__title">1927</figcaption><img class="card__image" src="assets/images/about.jpg" alt="" role="presentation" />
+                            <figcaption class="card__title">1927</figcaption>
+                            <div class="card__wrapper"><img class="card__image" src="assets/images/about.jpg" alt="" role="presentation" /></div>
                         </figure>
                     </div>
                 </div>
@@ -514,15 +520,19 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="scrolldown"></div>
+                        <div class="scrolldown">
+                            <div class="container">
+                                <div class="container container_inner"><a class="scrolldown__link js-anchor" href="#services"><span class="scrolldown__circle"><svg class="scrolldown__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></span><span class="scrolldown__text">Вниз</span></a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
-        <footer class="footer">
-            <div class="container"><a class="link link_gray link_underline footer__link" href="policy.html"><span class="link__text">Privacy Policy</span></a></div>
-        </footer>
     </main>
+    <footer class="footer">
+        <div class="container"><a class="link link_gray link_underline footer__link" href="policy.html"><span class="link__text">Privacy Policy</span></a></div>
+    </footer>
     <script src="assets/scripts/app.min.js"></script>
 </body>
 
