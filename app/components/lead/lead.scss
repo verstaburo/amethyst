@@ -6,7 +6,8 @@
   // background-color: $color-lead-bg;
   height: calc(var(--vh, 1vh) * 100);
   box-sizing: border-box;
-  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform $ease-main;
 
   @include rule(padding-top, (xl: 10.42vw, lg: 14.64vw, md: 20vw, sm: calc(var(--vh, 1vh) * 24.85)));
 
@@ -22,28 +23,28 @@
 
       &4 {
         z-index: 1;
-        transform: translateZ(0);
+        transform: translateZ(-3px) scale(4);
       }
 
       &3 {
         z-index: 2;
-        transform: translateZ(100px) scale(.9);
+        transform: translateZ(-2px) scale(3);
       }
 
       &2 {
         z-index: 3;
-        transform: translateZ(300px) scale(.7);
+        transform: translateZ(-1px) scale(2);
       }
 
       &1 {
         z-index: 4;
-        transform: translateZ(500px) scale(.5);
+        transform: translateZ(0);
       }
     }
 
     &_base {
       z-index: 5;
-      transform: translateZ(800px) scale(.2);
+      transform: translateZ(0);
     }
   }
 

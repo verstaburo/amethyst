@@ -9,13 +9,14 @@ html(lang='en')
     - var hdc = headerDark || false
     - var isFooter = noFooter || true
     - var pg = currpage || ''
-    if hdc
-      +header-dark(pg)
-    else
-      +header._abs(pg)
-    main.page
+    - var isParallax = parallax || ''
+    +b.MAIN.page(class=parallax)
+      if hdc
+        +header-dark(pg)
+      else
+        +header._abs(pg)
       block content
-    if isFooter
-      +footer
+      if isFooter
+        +footer
     script(src='assets/scripts/app.min.js')
     //- script(src='assets/scripts/main.js')

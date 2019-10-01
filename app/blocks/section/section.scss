@@ -3,6 +3,9 @@
 
   display: block;
   width: 100%;
+  transform-style: preserve-3d;
+  z-index: 2;
+  background-color: $color-bg;
 
   &__title {
     @include header-2;
