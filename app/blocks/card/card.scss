@@ -1,5 +1,44 @@
 .card {
   $b: &;
 
+  position: relative;
   display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  @include rule(padding-top, (xl: 101%, lg: 130%, md: 197%, sm: 134.4%));
+
+  &__title {
+    @include text-deco;
+    @include rule(display, (xl: inline-block, sm: none));
+    @include rule(top, (xl: -.678vw, lg: -1.1vw, md: -1.8vw));
+    @include rule(right, (xl: 2.71vw, lg: 3.81vw, md: 6.2vw));
+
+    position: absolute;
+    color: $color-white;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  &__image {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+
+    @include fill-img;
+  }
 }

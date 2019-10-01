@@ -2,4 +2,108 @@
   $b: &;
 
   display: block;
+  width: 100%;
+
+  .container_inner {
+    @include rule(overflow, (xl: hidden, md: visible));
+  }
+
+  &__circle {
+    @include rule(border-width, (xl: .052vw, lg: .073, md: .1vw, sm: .267vw));
+    @include rule(width, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 3.4vw));
+    @include rule(min-width, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 3.4vw));
+    @include rule(height, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 3.4vw));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: currentColor;
+    box-sizing: border-box;
+
+    @include screen('sm') {
+      @media (orientation: landscape) {
+        width: calc(var(--vh, 1vh) * 3.47);
+        min-width: calc(var(--vh, 1vh) * 3.47);
+        height: calc(var(--vh, 1vh) * 3.47);
+      }
+    }
+
+    &:not(:last-child) {
+      @include rule(margin-right, (xl: .625vw, lg: .878vw, md: 1.2vw, sm: 2.4vw));
+
+      @include screen('sm') {
+        @media (orientation: landscape) {
+          margin-right: calc(var(--vh, 1vh) * 2.4);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    @include rule(width, (xl: .26vw, lg: .366vw, md: .5vw, sm: 1.33vw));
+    @include rule(height, (xl: .208vw, lg: .293vw, md: .4vw, sm: 1.07vw));
+
+    fill: currentColor;
+    transform-origin: 50% 50% 0;
+    transition: transform $ease-main;
+
+    @include screen('sm') {
+      @media (orientation: landscape) {
+        width: calc(var(--vh, 1vh) * 1.33);
+        height: calc(var(--vh, 1vh) * 1.07);
+      }
+    }
+
+    #{$b}__link:hover & {
+      transform: translate3d(0, 15px, 0);
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    color: $color-white;
+    box-sizing: border-box;
+    font-weight: 700;
+
+    @include text;
+    @include rule(padding, (xl: .521vw 0, lg: .732vw 0, md: 1vw 0, sm: 0));
+
+    @include screen('sm') {
+      @media (orientation: landscape) {
+        font-size: calc(var(--vh, 1vh) * 3.73);
+      }
+    }
+
+    &::before, &::after {
+      @include pseudo;
+      @include rule(height, (xl: .052vw, lg: .073, md: .1vw, sm: .267vw));
+
+      top: 50%;
+      background-color: currentColor;
+    }
+
+    &::before {
+      width: 50vw;
+      transform-origin: 100% 50% 0;
+
+      @include rule(right, (xl: calc(100% + 1.3vw), lg: calc(100% + 1.83vw), md: calc(100% + 2.5vw), sm: calc(100% + 4.27vw)));
+    }
+
+    &::after {
+      width: 100vw;
+      transform-origin: 0 50% 0;
+
+      @include rule(left, (xl: calc(100% + 1.3vw), lg: calc(100% + 1.83vw), md: calc(100% + 2.5vw), sm: calc(100% + 4.27vw)));
+    }
+  }
+
+  &__text {
+    display: inline-block;
+  }
 }

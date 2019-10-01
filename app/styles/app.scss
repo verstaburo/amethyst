@@ -23,7 +23,7 @@
     max-width: none;
 
     @include rule(padding-left, (xl: 14.48vw, lg: 20.35vw, md: 14vw, sm: 0));
-    @include rule(padding-right, (xl: 4.69vw, lg: 0));
+    @include rule(padding-right, (xl: 4.69vw, lg: 0, md: 9vw, sm: 0));
   }
 
   &_text {
@@ -38,16 +38,26 @@
   position: relative;
   display: block;
   width: 100%;
-  height: calc(var(--vh, 1vh) * 100);
   overflow-x: hidden;
   overflow-y: auto;
 
-  &_parallax {
-    perspective: 1px;
-    transform-style: preserve-3d;
-    transition: transform $ease-main;
-    scroll-behavior: smooth;
+  &::before {
+    @include pseudo;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 120vh);
+    background-color: $color-bg;
+    z-index: 2;
   }
+
+  // &_parallax {
+  //   perspective: 1px;
+  //   transform-style: preserve-3d;
+  //   transition: transform $ease-main;
+  //   scroll-behavior: smooth;
+  // }
 }
 
 .js-sr {

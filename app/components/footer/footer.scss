@@ -1,4 +1,7 @@
 .footer {
   $b: &;
+
+  position: relative;
   display: block;
+  z-index: 4;
 }

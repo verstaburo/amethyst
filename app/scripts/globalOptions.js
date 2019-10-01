@@ -5,6 +5,6 @@ window.globalOptions = {
     lg: 1600,
     md: 1200,
     sm: 768,
-    xs: 480,
+    xs: 370,
   },
 };

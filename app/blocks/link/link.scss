@@ -1,25 +1,48 @@
 .link {
-  color: $color-main;
+  color: $color-basic;
   border: 0;
   transition: fill $ease-main, color $ease-main, opacity $ease-main, border-color $ease-main;
-  fill: $color-main;
+  fill: currentColor;
   display: inline-flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.5;
+
+  &_purple {
+    color: $color-main;
+  }
+
+  &_gray {
+    color: $color-gray;
+  }
 
   $b: &;
 
-  &:hover {
-    opacity: .5;
-  }
-
   &__text {
-    border-bottom: 1px solid;
-    border-color: inherit;
+    display: inline-block;
+    position: relative;
 
-    #{$b}_dashed & {
-      border-bottom-style: dashed;
+    &::before {
+      @include pseudo;
+      @include rule(height, (xl: .052vw, lg: .073, md: .1vw, sm: 8vw));
+
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: currentColor;
+      transform-origin: 50% 50% 0;
+      transform: scaleX(0);
+      transition: transform $ease-main;
+
+      #{$b}:hover & {
+        transform: scaleX(1);
+      }
+
+      #{$b}_underline & {
+        transform: scaleX(1);
+      }
+
+      #{$b}_underline:hover & {
+        transform: scaleX(0);
+      }
     }
   }
 

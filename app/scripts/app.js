@@ -1,8 +1,10 @@
 /* eslint-disable */
+import find from 'array.prototype.find';
 import svg4everybody from 'svg4everybody';
 import objectFitImages from 'object-fit-images';
 import './globalOptions';
 import './vhfix';
+import browsersDetection from './browser';
 import anchor from '../blocks/js-functions/anchor';
 import scrollAnimation from '../blocks/js-functions/scroll-animation';
 // import { selects, sliders, datepicker, inputmask, numberinput } from '../blocks/form/form';
@@ -16,10 +18,13 @@ import popups from '../blocks/popups/popups';
 // import '../blocks/rating/rating';
 // import '../blocks/dropdown/dropdown';
 import putBlockIntoSlot from '../blocks/js-functions/put-block-into-slot';
+import parallax from '../components/lead/lead';
 
 const $ = window.$;
 
 $(() => {
+  find.shim();
+  browsersDetection();
   svg4everybody();
   objectFitImages();
   anchor();
@@ -37,5 +42,6 @@ $(() => {
   scrollAnimation();
   // accordion();
   putBlockIntoSlot();
+  parallax();
 });
 /* eslint-enable */

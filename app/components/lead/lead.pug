@@ -1,19 +1,19 @@
 mixin lead()
   +b.SECTION.lead&attributes(attributes)
-    +e.layer_back4
+    +e.layer_back4(smooth-parallax start-position-y="0" end-position-y="1.7")
       +e.IMG.image(src="assets/images/parallax-layer-4.jpg")
-    +e.layer_back3
+    +e.layer_back3(smooth-parallax start-position-y="0" end-position-y="1.5")
       +e.IMG.image(src="assets/images/parallax-layer-3.png")
-    +e.layer_back2
+    +e.layer_back2(smooth-parallax start-position-y="0" end-position-y="1.3")
       +e.IMG.image(src="assets/images/parallax-layer-2.png")
-    +e.layer_back1
+    +e.layer_back1(smooth-parallax start-position-y="0" end-position-y="1.1")
       +e.IMG.image(src="assets/images/parallax-layer-1.png")
     +e.layer_base
       .container
-        .container_inner
-          +e.H1.title Consistent impeccable round-the-clock service
+        .container.container_inner
+          +e.H1.title Consistent impeccable round&#8209;the&#8209;clock service
           +e.text We reliably deliver delightful customer experience in the civil business aviation industry specializing in such services as aircraft sales and acquisitions, aircraft management, charter sales and aviation consulting.
-          +scrolldown().js-anchor(href="#services") Scroll down for more
+      +scrolldown().__scrolldown Scroll down for more
     block
 
 mixin ui-kit-lead()

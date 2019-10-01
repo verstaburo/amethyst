@@ -4,11 +4,11 @@
   h1, h2, h3, h4, h5, h6 {
 
     &:not(:first-child) {
-      margin-top: 10px;
+      @include rule(margin-top, (xl: 1.35vw, lg: 1.9vw, md: 2.6vw, sm: 4.534vw));
     }
 
     &:not(:last-child) {
-      margin-bottom: 10px;
+      @include rule(margin-bottom, (xl: 1.35vw, lg: 1.9vw, md: 2.6vw, sm: 4.534vw));
     }
   }
 
@@ -33,8 +33,8 @@
   p {
     @include text;
 
-    &:not(:first-child) {
-      margin-top: 10px;
+    &:not(:last-child) {
+      @include rule(margin-bottom, (xl: 1.41vw, lg: 1.98vw, md: 2.7vw, sm: 7.47vw));
     }
 
     small {
@@ -90,11 +90,11 @@
     @include text;
 
     &:not(:first-child) {
-      margin-top: 30px;
+      @include rule(margin-top, (xl: 1.35vw, lg: 1.9vw, md: 2.6vw, sm: 4.534vw));
     }
 
     &:not(:last-child) {
-      margin-bottom: 30px;
+      @include rule(margin-bottom, (xl: 1.35vw, lg: 1.9vw, md: 2.6vw, sm: 4.534vw));
     }
 
     li {
@@ -139,9 +139,10 @@
         color: $color-markers;
         font-weight: 700;
 
-        @include rule(right, (xl: calc(100% + 2.08vw), lg: calc(100% + 2.93vw), md: 0));
+        @include rule(right, (xl: calc(100% + 2.24vw), lg: calc(100% + 3.15vw), md: 0));
         @include rule(display, (xl: inline-block, md: block));
         @include rule(position, (xl: absolute, md: static));
+        @include rule(margin-bottom, (md: 1.7vw, sm: 2.13vw));
         @include text-small;
       }
 
@@ -156,6 +157,8 @@
           font-weight: 400;
 
           @include text;
+          @include rule(margin-bottom, (md: 0));
+          @include rule(margin-right, (xl: .208vw, lg: .293vw, md: .4vw, sm: 1.1vw));
         }
       }
 
@@ -170,6 +173,30 @@
           font-weight: 400;
 
           @include text;
+          @include rule(margin-bottom, (md: 0));
+        }
+      }
+    }
+  }
+
+  &_policy {
+
+    ol {
+
+      li {
+
+        &:not(:last-child) {
+          @include rule(margin-bottom, (xl: 4.27vw, lg: 5.71vw, md: 16vw));
+        }
+
+        ol {
+
+          li {
+
+            &:not(:last-child) {
+              margin-bottom: 0;
+            }
+          }
         }
       }
     }

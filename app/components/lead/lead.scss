@@ -3,13 +3,16 @@
 
   position: relative;
   display: block;
-  // background-color: $color-lead-bg;
   height: calc(var(--vh, 1vh) * 100);
   box-sizing: border-box;
   transform-style: preserve-3d;
-  transition: transform $ease-main;
+  transition: transform .05s ease;
+  color: $color-white;
+  z-index: 1;
 
-  @include rule(padding-top, (xl: 10.42vw, lg: 14.64vw, md: 20vw, sm: calc(var(--vh, 1vh) * 24.85)));
+  .is-ie & {
+    height: 100vh;
+  }
 
   &__layer {
     position: absolute;
@@ -23,28 +26,44 @@
 
       &4 {
         z-index: 1;
-        transform: translateZ(-3px) scale(4);
+        // transform: translateZ(-3px) scale(4);
       }
 
       &3 {
         z-index: 2;
-        transform: translateZ(-2px) scale(3);
+        // transform: translateZ(-2px) scale(3);
       }
 
       &2 {
         z-index: 3;
-        transform: translateZ(-1px) scale(2);
+        // transform: translateZ(-1px) scale(2);
       }
 
       &1 {
         z-index: 4;
-        transform: translateZ(0);
+        // transform: translateZ(0);
+      }
+
+      &0 {
+        z-index: 5;
       }
     }
 
     &_base {
-      z-index: 5;
+      // display: flex;
+      z-index: 6;
       transform: translateZ(0);
+      box-sizing: border-box;
+
+      @include rule(display, (xl: flex, sm: block));
+      @include rule(padding-top, (xl: 10.42vw, lg: 14.64vw, md: 20vw, sm: calc(var(--vh, 1vh) * 28.78)));
+      @include rule(padding-bottom, (xl: 10.42vw, lg: 14.64vw, md: 20vw, sm: calc(var(--vh, 1vh) * 2.24)));
+
+      @include screen('sm') {
+        @media (orientation: landscape) {
+          padding-top: calc(var(--vh, 1vh) * 30);
+        }
+      }
     }
   }
 
@@ -58,5 +77,61 @@
     transform: translate3d(-50%, 0, 0);
     min-height: 100%;
     min-width: 100%;
+  }
+
+  &__scrolldown {
+    position: absolute;
+    left: 0;
+
+    @include rule(position, (xl: absolute, sm: static));
+    @include rule(bottom, (xl: 20.7%, md: 16.9%, sm: 9.4%));
+    @include rule(margin-top, (sm: calc(var(--vh, 1vh) * 6.29), xs: calc(var(--vh, 1vh) * 3.14)));
+  }
+
+  .container {
+    display: flex;
+
+    &_inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @include rule(align-content, (xl: center, sm: flex-start));
+    }
+  }
+
+  &__title {
+    @include header-1;
+    @include rule(max-width, (xl: 40.625vw, lg: 57.101vw, md: none));
+
+    display: block;
+    width: 100%;
+    font-weight: 400;
+
+    @include screen('sm') {
+      @media (orientation: landscape) {
+        font-size: calc(var(--vh, 1vh) * 9.33);
+      }
+    }
+
+    &:not(:last-child) {
+      @include rule(margin-bottom, (xl: 2.76vw, lg: 3.88vw, md: 5.3vw, sm: calc(var(--vh, 1vh) * 5.24)));
+    }
+  }
+
+  &__text {
+    @include header-3-sm14;
+    @include rule(max-width, (xl: 40.625vw, lg: 57.101vw, md: none));
+
+    display: block;
+    width: 100%;
+    font-weight: 400;
+
+    @include screen('sm') {
+      @media (orientation: landscape) {
+        font-size: calc(var(--vh, 1vh) * 3.73);
+      }
+    }
   }
 }

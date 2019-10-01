@@ -1,7 +1,13 @@
 mixin scrolldown()
   +b.scrolldown&attributes(attributes)
-    block
-    
+    .container
+      .container.container_inner
+        +e.A.link.js-anchor(href="#services")
+          +e.circle
+            +icon('arrow').__icon
+          +e.text
+            block
+
 mixin ui-kit-scrolldown()
   +ui-section
     +ui-section-head
@@ -10,10 +16,10 @@ mixin ui-kit-scrolldown()
         p Блок: blocks/scrolldown/scrolldown
       +ui-description
         p Описание Блока
-  
+
     +ui-section-content()
-      +scrolldown
-      
+      +scrolldown Вниз
+
     //- При +ui-section-content(true) контейнер отсутствует
     //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
     //- Рамка вокруг особой секции: +ui-special()

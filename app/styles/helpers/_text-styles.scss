@@ -9,7 +9,7 @@
 
 @mixin header-1 {
   @include rule(font-size, (xl: 3.64vw, lg: 5.12vw, md: 7vw, sm: 9.33vw)); // 70-35
-  @include rule(line-height, (xl: .86, sm: 1));
+  @include rule(line-height, (xl: .86, sm: 1.02));
   @include rule(letter-spacing, (xl: -.02em));
 
   font-family: $font-header;
@@ -39,7 +39,7 @@
 
 @mixin header-3-sm14 {
   @include rule(font-size, (xl: .9375vw, lg: 1.317vw, md: 1.8vw, sm: 3.73vw)); // 18 - 14
-  @include rule(line-height, (xl: 1.67, sm: 1.64));
+  @include rule(line-height, (xl: 1.67, sm: 2.05));
   @include rule(letter-spacing, (xl: -.02em));
 }
 
@@ -62,8 +62,8 @@
 }
 
 @mixin text {
-  @include rule(font-size, (xl: .781vw, lg: 1.1vw, md: 1.5vw, sm: 3.73vw)); // 15 - 14
-  @include rule(line-height, (xl: 1.8, sm: 2));
+  @include rule(font-size, (xl: .781vw, lg: 1.1vw, md: 1.5vw, sm: 3.734vw)); // 15 - 14
+  @include rule(line-height, (xl: 1.8, sm: 2.05));
   @include rule(letter-spacing, (xl: -.02em));
 }
 
