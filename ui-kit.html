@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amethyst | UI-кит</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <main class="page" role="main">
+        <header class="header header_abs" pg="pg">
+            <div class="container">
+                <div class="header__logo"><img class="header__image" src="assets/images/logo.svg" alt="" role="presentation" /></div>
+                <div class="header__slogan">Your business aviation insider</div>
+            </div>
+        </header>
+        <script>
+            $(window).on('load', function() {
+                $('.ui-kit__section').each(function(i) {
+                    var id = 'section' + i;
+                    var name = $(this).find('.ui-kit__section-head h2').text();
+                    var li = $('<li></li>');
+                    var a = $('<a></a>');
+
+                    a.attr('href', '#' + id).text(name).addClass('js-anchor');
+                    li.append(a);
+
+                    $('.ui-kit__navigation__list').append(li);
+                    $(this).attr('id', id);
+                });
+            });
+        </script>
+        <div class="ui-kit">
+            <div class="ui-kit__navigation">
+                <ul class="ui-kit__navigation__list"></ul>
+            </div>
+            <section class="ui-kit__head">
+                <div class="container"><img class="ui-kit__logo" src="assets/images/logo.svg" alt="Логотип проекта" title="" />
+                    <div class="ui-kit__name">Amethyst</div>
+                </div>
+            </section>
+            <section class="ui-kit__section ui-kit__section_grid">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Сетка</h2>
+                        <div class="ui-kit__description">
+                            <p>Колонок: 12 ($grid-cols)</p>
+                            <p>Переменные: styles/helpers/_variables.scss</p>
+                            <p>Блок: blocks/grid/</p>
+                            <div class="ui-kit__special">
+                                <p>Возможные варианты использования</p>
+                                <p>
+                                    <pre>+col(12) аналогично +col({ xl: 12 })</pre>
+                                </p>
+                                <p>
+                                    <pre>+col({ xl: 8, lg: 6: md: 5, sm: 7, xs: 12 })</pre>
+                                </p>
+                                <p>Промежуточные брейкпоинты указывать не обязательно</p>
+                                <p>При следующей записи - блок будет занимать 6 колонок на всех разрешениях, а на самом маленьком (xs) — 12</p>
+                                <p>
+                                    <pre>+col({ xl: 6, xs: 12 })</pre>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="grid">
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_4"></div>
+                            <div class="grid__col grid__col_xl_4"></div>
+                            <div class="grid__col grid__col_xl_4"></div>
+                            <div class="grid__col grid__col_xl_6"></div>
+                            <div class="grid__col grid__col_xl_6"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Шрифты</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Переменные находятся в файле styles/helpers/_variables.scss</p>
+                            <p>Шрифты подключены в styles/helpers/_fonts.scss</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Основной шрифт: Arial ($font-main), font-weight: 400, 600</p>
+                            <p>Дополнительный шрифт: Times New Roman ($font-second), font-weight: 400, 600</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Цвета сайта</h2>
+                        <div class="ui-kit__blockpath">Переменные находятся в файле styles/helpers/_variables.scss</div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__elements-list">
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Градиенты</h2>
+                        <div class="ui-kit__blockpath">Миксины градиентов находятся в файле styles/helpers/_gradients.scss</div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__elements-list">
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Попапы</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/popups/popups</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>На ссылку вешается класс .js-fancybox, в [href] указывается id попапа (href="#popup")</p>
+                            <p>Демонстрация попапов на странице <a href="sitemap.html">sitemap.html</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Ссылки</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/link/link</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__elements-list"><a class="link" href="#"><span class="link__text">Обычная ссылка</span></a><a class="link link_dashed" href="#"><span class="link__text">Пунктирная ссылка</span></a><a class="link" href="#"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_refresh"></use></svg><span class="link__text">Ссылка с иконкой</span></a><a class="link is-disabled" href="#"><span class="link__text">Отключенная ссылка</span></a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Анимации при скролле</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/js-functions/scrollAnimation</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>.js-sr — общий класс для анимируемых элементов</p>
+                            <p>Предустановленные модификаторы для появления с разных сторон:</p>
+                            <div class="ui-kit__special">
+                                <p>.js-sr_top — появление сверху</p>
+                                <p>.js-sr_right — появление справа</p>
+                                <p>.js-sr_bottom — появление снизу</p>
+                                <p>.js-sr_left — появление слева</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__elements-list"><a class="button js-sr js-sr js-sr_left">.js-sr_left</a><a class="button js-sr js-sr js-sr_top">.js-sr_top</a><a class="button js-sr js-sr js-sr_right">.js-sr_right</a><a class="button js-sr js-sr js-sr_bottom">.js-sr_bottom</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Кнопки</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/button/button</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__elements-list"><a class="button">Кнопка</a><a class="button" disabled="disabled">Отключенная кнопка</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Контентная зона</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/content-zone/content-zone</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Текстовая зона для WYSIWYG-редакторов</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__special">
+                            <div class="content-zone">
+                                <h1>Заголовок H1 (header-1)</h1>
+                                <h2>Заголовок H2 (header-2)</h2>
+                                <h3>Заголовок H3 (header-3)</h3>
+                                <p>Текст p (text)<br> Цитата внутри текста p: <q>Цитата q</q></p>
+                                <p><small>Тег small внутри p (text-small)</small></p>
+                                <blockquote>
+                                    <p>Демонстрация цитаты через тег blockquote</p>
+                                    <h4>Внутри могут быть заголовки</h4>
+                                    <p>Текст с <a href="#">ссылкой в тексте</a></p>
+                                </blockquote>
+                                <p>Картинка в тексте (img):</p><img src="http://verstaburo.com/NEW/patterns/pattern.jpg" />
+                                <p>Маркированный список ul. Стили взяты из styles/helpers/_list-styles.scss</p>
+                                <ul>
+                                    <li>Элемент списка</li>
+                                    <li>Другой элемент<ul>
+                                            <li>Элемент списка</li>
+                                            <li>Другой элемент</li>
+                                            <li>Элемент списка</li>
+                                        </ul>
+                                    </li>
+                                    <li>Элемент списка</li>
+                                </ul>
+                                <p>Нумерованный список ol. Стили взяты из styles/helpers/_list-styles.scss</p>
+                                <ol>
+                                    <li>Элемент списка</li>
+                                    <li>Другой элемент<ol>
+                                            <li>Элемент списка</li>
+                                            <li>Другой элемент</li>
+                                            <li>Элемент списка</li>
+                                        </ol>
+                                    </li>
+                                    <li>Элемент списка</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент header</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/header/header</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <header class="header">
+                            <div class="container">
+                                <div class="header__logo"><img class="header__image" src="assets/images/logo.svg" alt="" role="presentation" /></div>
+                                <div class="header__slogan">Your business aviation insider</div>
+                            </div>
+                        </header>
+                        <header class="header header_dark">
+                            <div class="container"><a class="header__logo" href="/"><img class="header__image" src="assets/images/logo-dark.svg" alt="" role="presentation" /></a>
+                                <div class="header__slogan">Amethyst Jet - your business aviation insider</div>
+                            </div>
+                        </header>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент footer</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/footer/footer</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <footer class="footer">
+                            <div class="container"><a class="link link_gray link_underline footer__link" href="policy.html"><span class="link__text">Privacy Policy</span></a></div>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент lead</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/lead/lead</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <section class="lead">
+                            <div class="lead__layer lead__layer_back4"><img class="lead__image" src="assets/images/parallax-layer-4.jpg" alt="" role="presentation" /></div>
+                            <div class="lead__layer lead__layer_back3"><img class="lead__image" src="assets/images/parallax-layer-3.png" alt="" role="presentation" /></div>
+                            <div class="lead__layer lead__layer_back2"><img class="lead__image" src="assets/images/parallax-layer-2.png" alt="" role="presentation" /></div>
+                            <div class="lead__layer lead__layer_back1"><img class="lead__image" src="assets/images/parallax-layer-1.png" alt="" role="presentation" /></div>
+                            <div class="lead__layer lead__layer_base">
+                                <div class="container">
+                                    <div class="container_inner">
+                                        <h1 class="lead__title">Consistent impeccable round-the-clock service</h1>
+                                        <div class="lead__text">We reliably deliver delightful customer experience in the civil business aviation industry specializing in such services as aircraft sales and acquisitions, aircraft management, charter sales and aviation consulting.</div><a class="scrolldown js-anchor" href="#services">Scroll down for more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок parallax</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/parallax/parallax</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="parallax"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент navigation</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/navigation/navigation</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="navigation"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок section</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/section/section</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <section class="section">
+                            <h2 class="section__title">Заголовок</h2>
+                            <div class="section__content content-zone">
+                                <h3>Внутренний заголовок</h3>
+                                <p>Содержание</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок card</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/card/card</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <figure class="card">
+                            <figcaption class="card__title">1927</figcaption><img class="card__image" src="assets/images/about.jpg" alt="" role="presentation" />
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент contacts</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/contacts/contacts</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="contacts">
+                            <div class="contacts__address">Arch. Makariou III, 155, Proteas House, 5th floor, 3026, Limassol, Cyprus</div>
+                            <div class="contacts__communications">
+                                <div class="contacts__item">
+                                    <div class="contacts__name">Phone:</div>
+                                    <div class="contacts__links"><a class="link contacts__link" href="tel:+35725057219"><span class="link__text">+357 250 57 219</span></a></div>
+                                </div>
+                                <div class="contacts__item">
+                                    <div class="contacts__name hide-sm">Mail:</div>
+                                    <div class="contacts__links"><a class="link link_purple contacts__link" href="mailto:vr@amethystjet.net"><span class="link__text">vr@amethystjet.net</span></a><a class="link link_purple contacts__link" href="mailto:info@amethystjet.net"><span class="link__text">info@amethystjet.net</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок scrolldown</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/scrolldown/scrolldown</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="scrolldown"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="container"><a class="link link_gray link_underline footer__link" href="policy.html"><span class="link__text">Privacy Policy</span></a></div>
+        </footer>
+    </main>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>
