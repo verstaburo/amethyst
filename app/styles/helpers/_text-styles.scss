@@ -79,6 +79,14 @@
   @include rule(letter-spacing, (xl: -.02em));
 }
 
+@mixin text-micro {
+  @include rule(font-size, (xl: .469vw, lg: .659vw, md: .9vw, sm: 2.13vw)); // 12
+  @include rule(line-height, (xl: 1.5625vw, lg: 2.196vw, md: 3vw, sm: 4.8vw));
+  @include rule(letter-spacing, (xl: .54em));
+
+  text-transform: uppercase;
+}
+
 @mixin text-deco {
   @include rule(font-size, (xl: 6.61vw, lg: 9.3vw, md: 12.7vw, sm: 33.86vw)); // 127
   @include rule(line-height, (xl: .4));

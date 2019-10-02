@@ -4,17 +4,12 @@
   position: relative;
   display: block;
   width: 100%;
-  transform-style: preserve-3d;
   z-index: 3;
   background-color: $color-bg;
   box-sizing: border-box;
 
   @include rule(padding-top, (xl: 7.969vw, lg: 11.2vw, md: 8.7vw, sm: 16vw));
   @include rule(padding-bottom, (xl: 3.125vw, lg: 3.1vw, md: 9.7vw, sm: 10.1vw));
-
-  &:last-child {
-
-  }
 
   &__title {
     @include header-2;
@@ -34,13 +29,7 @@
         }
       }
 
-      // &-abs {
-      //   @include screen('sm') {
-
-      //   }
-      // }
-
-      &_small {
+      &-small {
         @include header-2-sm30;
       }
     }
@@ -158,8 +147,23 @@
       }
 
       &__content {
+
         &:not(:last-child) {
           @include rule(margin-bottom, (xl: 5.1vw, lg: 5.42vw, md: 7.1vw, sm: 10.67vw));
+        }
+      }
+    }
+  }
+
+  &_contacts {
+    @include rule(padding-top, (xl: 19.95vw, lg: 11.71vw, md: 15.2vw, sm: 17.6vw));
+
+    #{$b} {
+
+      &__title {
+
+        &:not(:last-child) {
+          @include rule(margin-bottom, (xl: 4.06vw, lg: 6vw, md: 8.3vw, sm: 12.27vw));
         }
       }
     }

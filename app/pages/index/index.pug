@@ -5,13 +5,11 @@ block head
 
 block header
   - var headerDark = false
-  - var noFooter = true
-  - var parallax = '_parallax'
+  +navigation
 
 block content
-  +navigation
-  +lead#about
-  +section._service#services
+  +lead#about(data-section)
+  +section._service#services(data-section)
     .container
       .container.container_inner
         +section-title Amethyst Services
@@ -29,20 +27,20 @@ block content
             li
               h3 Aviation Consulting
               p Our teams theoretical knowledge combined with long-term practical experience to offer you bespoke solutions in the field of aviation consulting. From business analysis to audit of the flight operations; to comprehensive technical aircraft audits and strategy development, you can trust us our unique perspective.
-  +section._history#history
+  +section._history#history(data-section)
     +e.card
       +card
     .container
       .container.container_inner
         +e.wrapper
-          +section-title._sm-white._sm-abs Amethyst Jet solutions 1927&nbsp;Ltd
+          +section-title._sm-white Amethyst Jet solutions 1927&nbsp;Ltd
           +section-content.content-zone
             p Our company’s name is featuring a very special date in aviation’s history. In 1927 Charles Lindbergh, an American aviator, military officer, author, inventor, explorer, and environmental activist became the first man to successfully fly an airplane across the Atlantic Ocean. As for amethyst, this gemstone is known for creating a strong sense of wellbeing and often is synonymous with luxury.
             p Amethyst’s powerful qualities such as balance, clarity and protection in combination with luxury and stability, speak to our core values: we provide a world-class service without hidden fees. From private charter flights to aircraft support, we are holding your back.
             p One of company’s greatest assets is our highly experienced team with outstanding expertise in various aviation sectors, working hard to provide you with full customer satisfaction.
           +section-content
             +e.question You and your business are unique, so why settle for anything less than a bespoke tailored service from your aviation company?
-  +section._contacts#contacts
+  +section._contacts#contacts(data-section)
     .container
       .container.container_inner
         +section-title._sm-small Contacts

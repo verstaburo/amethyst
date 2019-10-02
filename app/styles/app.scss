@@ -38,8 +38,9 @@
   position: relative;
   display: block;
   width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  box-sizing: border-box;
+
+  @include rule(padding-bottom, (xl: 4.844vw, lg: 8.1vw, md: 4vw, sm: 6vw));
 
   &::before {
     @include pseudo;
@@ -47,17 +48,44 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 120vh);
+    height: calc(100% - 100vh);
     background-color: $color-bg;
     z-index: 2;
   }
+}
 
-  // &_parallax {
-  //   perspective: 1px;
-  //   transform-style: preserve-3d;
-  //   transition: transform $ease-main;
-  //   scroll-behavior: smooth;
-  // }
+.hide {
+  display: none;
+}
+
+.hide-lg {
+  @include rule(display, (lg: none));
+}
+
+.hide-md {
+  @include rule(display, (md: none));
+}
+
+.hide-sm {
+  @include rule(display, (sm: none));
+}
+
+.show-lg {
+  @include screen('lg', min) {
+    display: none;
+  }
+}
+
+.show-md {
+  @include screen('md', min) {
+    display: none;
+  }
+}
+
+.show-sm {
+  @include screen('sm', min) {
+    display: none;
+  }
 }
 
 .js-sr {

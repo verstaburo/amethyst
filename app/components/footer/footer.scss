@@ -4,4 +4,19 @@
   position: relative;
   display: block;
   z-index: 4;
+  box-sizing: border-box;
+
+  @include rule(padding-top, (xl: 4.58vw, lg: 5.71vw, md: .1vw, sm: 3.73vw));
+  @include rule(padding-bottom, (xl: 2.5vw, lg: 3.51vw, md: 12.6vw, sm: 7.47vw));
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    max-width: none;
+  }
+
+  &__link {
+    @include text-mid;
+  }
 }

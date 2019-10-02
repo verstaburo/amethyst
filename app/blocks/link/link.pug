@@ -17,8 +17,9 @@ mixin ui-kit-links
     +ui-section-content()
       +ui-elements-list
         +link()(href="#") Обычная ссылка
-        +link()(href="#")._dashed Пунктирная ссылка
-        +link('refresh')(href="#") Ссылка с иконкой
+        +link()(href="#")._unerline Подчеркнутая ссылка
+        +link()._purple(href="#") Ссылка
+        +link()._gray(href="#") Ссылка
         +link()(href="#").is-disabled Отключенная ссылка
 
     //- При +ui-section-content(true) контейнер отсутствует

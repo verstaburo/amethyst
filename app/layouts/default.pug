@@ -7,16 +7,15 @@ html(lang='en')
   body
     block header
     - var hdc = headerDark || false
-    - var isFooter = noFooter || true
+    - var isFooter = noFooter || false
     - var pg = currpage || ''
-    - var isParallax = parallax || ''
     if hdc
       +header-dark(pg)
     else
       +header._abs(pg)
-    +b.MAIN.page(class=parallax)
+    +b.MAIN.page
       block content
-    if isFooter
+    if !isFooter
       +footer
     script(src='assets/scripts/app.min.js')
     //- script(src='assets/scripts/main.js')

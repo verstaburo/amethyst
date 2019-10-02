@@ -1,4 +1,189 @@
 .navigation {
   $b: &;
-  display: block;
+
+  position: fixed;
+  height: 100%;
+  display: flex;
+  bottom: 0;
+  z-index: 9;
+  box-sizing: border-box;
+  color: $color-basic;
+  transition: color $ease-main;
+
+  @include rule(padding-left, (xl: 4.01vw, lg: 5.637vw, md: 4vw, sm: 0));
+  @include rule(left, (xl: 7.29vw, lg: 3.44vw, md: 2.8vw, sm: auto));
+  @include rule(right, (sm: 2.667vw));
+
+  @include screen('sm') {
+    @media (orientation: landscape) {
+      right: calc(var(--vh, 1vh) * 2.667);
+    }
+  }
+
+  &.is-light {
+    color: $color-white;
+  }
+
+  &__titles {
+    position: absolute;
+    top: 100%;
+    display: block;
+    transform-origin: 0 0 0;
+    transform: rotate(-90deg);
+    left: 0;
+    box-sizing: border-box;
+
+    @include rule(width, (xl: calc(var(--vh, 1vh) * 100)));
+    @include rule(height, (xl: 1.5625vw, lg: 2.196vw, md: 3vw, sm: 4.8vw));
+
+    @include screen('sm') {
+      @media (orientation: landscape) {
+        height: calc(var(--vh, 1vh) * 4.8);
+      }
+    }
+
+    .is-ie & {
+      width: 100vh;
+    }
+  }
+
+  &__title {
+    @include text-micro;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    transition: opacity $ease-main, transform $ease-main;
+    opacity: 0;
+    transform: translate3d(0, -15px, 0);
+    transition-delay: .2s;
+
+    @include screen('sm') {
+      text-align: right;
+      transform: translate3d(0, 15px, 0);
+      right: calc(var(--vh, 1vh) * 4.49);
+      left: calc(var(--vh, 1vh) * 4.49);
+
+      @media (orientation: landscape) {
+        font-size: calc(var(--vh, 1vh) * 2.13);
+        line-height: calc(var(--vh, 1vh) * 4.8);
+      }
+    }
+
+    &.is-active {
+      transition-delay: 0s;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+
+    @include rule(width, (xl: 1.875vw, lg: 2.63vw, md: 3.6vw, sm: 4.8vw));
+    @include rule(min-width, (xl: 1.875vw, lg: 2.63vw, md: 3.6vw, sm: 4.8vw));
+    @include rule(height, (xl: 1.875vw, lg: 2.63vw, md: 3.6vw, sm: 4.8vw));
+
+    @include screen('sm') {
+      @media (orientation: landscape) {
+        width: calc(var(--vh, 1vh) * 4.8);
+        min-width: calc(var(--vh, 1vh) * 4.8);
+        height: calc(var(--vh, 1vh) * 4.8);
+      }
+    }
+
+    &:not(:last-child) {
+      @include rule(margin-bottom, (xl: .364vw, lg: .512vw, md: .7vw, sm: 1.07vw));
+
+      @include screen('sm') {
+        @media (orientation: landscape) {
+          margin-bottom: calc(var(--vh, 1vh) * 1.07);
+        }
+      }
+    }
+
+    &::before, &::after {
+      @include pseudo;
+
+      box-sizing: border-box;
+      border-style: solid;
+      border-color: currentColor;
+      border-radius: 50%;
+      transition: opacity $ease-main, transform $ease-main, background $ease-main;
+      border-width: 1px;
+    }
+
+    &::before {
+      @include rule(width, (xl: .364vw, lg: .512vw, md: .7vw, sm: 1.07vw));
+      @include rule(height, (xl: .364vw, lg: .512vw, md: .7vw, sm: 1.07vw));
+      @include rule(min-height, (xl: .364vw, lg: .512vw, md: .7vw, sm: 1.07vw));
+      @include rule(top, (xl: .729vw, lg: 1.025vw, md: 1.4vw, sm: 1.87vw));
+      @include rule(left, (xl: .729vw, lg: 1.025vw, md: 1.4vw, sm: 1.87vw));
+
+      @include screen('sm') {
+        @media (orientation: landscape) {
+          width: calc(var(--vh, 1vh) * 1.07);
+          height: calc(var(--vh, 1vh) * 1.07);
+          min-height: calc(var(--vh, 1vh) * 1.07);
+          top: calc(var(--vh, 1vh) * 1.87);
+          left: calc(var(--vh, 1vh) * 1.87);
+        }
+      }
+    }
+
+    &::after {
+      transform-origin: 50% 50% 0;
+      opacity: 0;
+      transform: scale(.5);
+
+      @include rule(width, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 2.134vw));
+      @include rule(height, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 2.134vw));
+      @include rule(min-height, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 2.134vw));
+      @include rule(top, (xl: .52vw, lg: .732vw, md: 1vw, sm: 1.34vw));
+      @include rule(left, (xl: .52vw, lg: .732vw, md: 1vw, sm: 1.34vw));
+
+      @include screen('sm') {
+        @media (orientation: landscape) {
+          width: calc(var(--vh, 1vh) * 2.134);
+          height: calc(var(--vh, 1vh) * 2.134);
+          min-height: calc(var(--vh, 1vh) * 2.134);
+          top: calc(var(--vh, 1vh) * 1.34);
+          left: calc(var(--vh, 1vh) * 1.34);
+        }
+      }
+    }
+
+    &:hover {
+
+      &::after {
+        opacity: .4;
+        transform: scale(1);
+      }
+    }
+
+    &.is-active {
+
+      &::before {
+        background-color: currentColor;
+      }
+
+      &::after {
+        opacity: .4;
+        transform: scale(1);
+      }
+    }
+  }
 }

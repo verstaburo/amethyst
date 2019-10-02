@@ -5,6 +5,7 @@
   fill: currentColor;
   display: inline-flex;
   align-items: center;
+  line-height: 1.2;
 
   &_purple {
     color: $color-main;
@@ -22,7 +23,7 @@
 
     &::before {
       @include pseudo;
-      @include rule(height, (xl: .052vw, lg: .073, md: .1vw, sm: 8vw));
+      @include rule(height, (xl: .052vw, lg: .073, md: .1vw, sm: .267vw));
 
       bottom: 0;
       left: 0;

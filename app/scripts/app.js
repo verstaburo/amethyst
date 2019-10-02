@@ -19,6 +19,7 @@ import popups from '../blocks/popups/popups';
 // import '../blocks/dropdown/dropdown';
 import putBlockIntoSlot from '../blocks/js-functions/put-block-into-slot';
 import parallax from '../components/lead/lead';
+import navigation from '../components/navigation/navigation';
 
 const $ = window.$;
 
@@ -43,5 +44,6 @@ $(() => {
   // accordion();
   putBlockIntoSlot();
   parallax();
+  navigation();
 });
 /* eslint-enable */

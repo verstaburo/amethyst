@@ -2,4 +2,91 @@
   $b: &;
 
   display: block;
+  width: 100%;
+
+  &__address {
+    display: block;
+    width: 100%;
+
+    @include header-3-sm14;
+
+    @include screen('sm') {
+      line-height: 1.64;
+    }
+
+    &:not(:last-child) {
+      @include rule(margin-bottom, (xl: 3.646vw, lg: 5.12vw, md: 7vw, sm: 25.6vw));
+    }
+  }
+
+  &__communications {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include header-3;
+
+    @include screen('lg') {
+      width: calc(100% + 9vw);
+      margin-right: -9vw;
+    }
+
+    @include screen('sm') {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    @include rule(width, (sm: 100%));
+
+    &:not(:last-child) {
+      @include rule(margin-right, (xl: 4.27vw, lg: 6vw, md: 8.2vw, sm: 0));
+      @include rule(margin-bottom, (sm: 4.534vw));
+    }
+  }
+
+  &__name {
+    display: inline-block;
+
+    &:not(:last-child) {
+      @include rule(margin-right, (xl: .208vw, lg: .293vw, md: .4vw, sm: 1.07vw));
+    }
+
+    &_mg {
+
+      &:not(:last-child) {
+        @include rule(margin-right, (xl: .729vw, lg: 1.02vw, md: 1.4vw, sm: 2.4vw));
+      }
+    }
+  }
+
+  &__links {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    max-width: 100%;
+
+    @include screen('sm') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__link {
+
+    &:not(:last-child) {
+      @include rule(margin-right, (xl: 1.5625vw, lg: 2.2vw, md: 3vw, sm: 0));
+      @include rule(margin-bottom, (sm: 5.334vw));
+    }
+  }
 }

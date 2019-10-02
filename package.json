@@ -75,6 +75,7 @@
     "postcss-reporter": "^3.0.0",
     "postcss-scss": "^0.4.1",
     "require-dir": "^0.3.1",
+    "resize-observer-polyfill": "^1.5.1",
     "run-sequence": "^1.2.2",
     "scrollreveal": "^4.0.5",
     "simple-parallax-js": "^5.1.0",
