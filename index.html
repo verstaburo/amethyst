@@ -14,15 +14,23 @@
 </head>
 
 <body>
+    <div class="navigation" data-nav-container="data-nav-container">
+        <div class="navigation__titles">
+            <div class="navigation__title" data-nav-title="about">WHO WE ARE</div>
+            <div class="navigation__title" data-nav-title="services">SERVICES</div>
+            <div class="navigation__title" data-nav-title="history">HISTORY</div>
+            <div class="navigation__title" data-nav-title="contacts">contacts</div>
+        </div>
+        <div class="navigation__links"><a class="navigation__link js-anchor" href="#about" title="who we are" data-nav-link="about" data-nav-add-class="is-light" data-nav-remove-class=""></a><a class="navigation__link js-anchor" href="#services" title="services" data-nav-link="services" data-nav-add-class="" data-nav-remove-class="is-light"></a><a class="navigation__link js-anchor" href="#history" title="history" data-nav-link="history" data-nav-add-class="" data-nav-remove-class="is-light"></a><a class="navigation__link js-anchor" href="#contacts" title="contacts" data-nav-link="contacts" data-nav-add-class="" data-nav-remove-class="is-light"></a></div>
+    </div>
     <header class="header header_abs" pg="pg">
         <div class="container">
             <div class="header__logo"><img class="header__image" src="assets/images/logo.svg" alt="" role="presentation" /></div>
             <div class="header__slogan">Your business aviation insider</div>
         </div>
     </header>
-    <main class="page page_parallax" role="main">
-        <div class="navigation"></div>
-        <section class="lead" id="about">
+    <main class="page" role="main">
+        <section class="lead" id="about" data-section="data-section">
             <div class="lead__layer lead__layer_back4" smooth-parallax="smooth-parallax" start-position-y="0" end-position-y="1.7"><img class="lead__image" src="assets/images/parallax-layer-4.jpg" alt="" role="presentation" /></div>
             <div class="lead__layer lead__layer_back3" smooth-parallax="smooth-parallax" start-position-y="0" end-position-y="1.5"><img class="lead__image" src="assets/images/parallax-layer-3.png" alt="" role="presentation" /></div>
             <div class="lead__layer lead__layer_back2" smooth-parallax="smooth-parallax" start-position-y="0" end-position-y="1.3"><img class="lead__image" src="assets/images/parallax-layer-2.png" alt="" role="presentation" /></div>
@@ -41,7 +49,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section_service" id="services">
+        <section class="section section_service" id="services" data-section="data-section">
             <div class="container">
                 <div class="container container_inner">
                     <h2 class="section__title">Amethyst Services</h2>
@@ -68,7 +76,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section_history" id="history">
+        <section class="section section_history" id="history" data-section="data-section">
             <div class="section__card">
                 <figure class="card">
                     <figcaption class="card__title">1927</figcaption>
@@ -78,7 +86,7 @@
             <div class="container">
                 <div class="container container_inner">
                     <div class="section__wrapper">
-                        <h2 class="section__title section__title_sm-white section__title_sm-abs">Amethyst Jet solutions 1927&nbsp;Ltd</h2>
+                        <h2 class="section__title section__title_sm-white">Amethyst Jet solutions 1927&nbsp;Ltd</h2>
                         <div class="section__content content-zone">
                             <p>Our company’s name is featuring a very special date in aviation’s history. In 1927 Charles Lindbergh, an American aviator, military officer, author, inventor, explorer, and environmental activist became the first man to successfully fly an airplane across the Atlantic Ocean. As for amethyst, this gemstone is known for creating a strong sense of wellbeing and often is synonymous with luxury.</p>
                             <p>Amethyst’s powerful qualities such as balance, clarity and protection in combination with luxury and stability, speak to our core values: we provide a world-class service without hidden fees. From private charter flights to aircraft support, we are holding your back.</p>
@@ -91,7 +99,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section_contacts" id="contacts">
+        <section class="section section_contacts" id="contacts" data-section="data-section">
             <div class="container">
                 <div class="container container_inner">
                     <h2 class="section__title section__title_sm-small">Contacts</h2>
@@ -104,7 +112,7 @@
                                     <div class="contacts__links"><a class="link contacts__link" href="tel:+35725057219"><span class="link__text">+357 250 57 219</span></a></div>
                                 </div>
                                 <div class="contacts__item">
-                                    <div class="contacts__name hide-sm">Mail:</div>
+                                    <div class="contacts__name contacts__name_mg hide-sm">Mail:</div>
                                     <div class="contacts__links"><a class="link link_purple contacts__link" href="mailto:vr@amethystjet.net"><span class="link__text">vr@amethystjet.net</span></a><a class="link link_purple contacts__link" href="mailto:info@amethystjet.net"><span class="link__text">info@amethystjet.net</span></a></div>
                                 </div>
                             </div>

@@ -213,7 +213,7 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="ui-kit__elements-list"><a class="link" href="#"><span class="link__text">Обычная ссылка</span></a><a class="link link_dashed" href="#"><span class="link__text">Пунктирная ссылка</span></a><a class="link" href="#"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_refresh"></use></svg><span class="link__text">Ссылка с иконкой</span></a><a class="link is-disabled" href="#"><span class="link__text">Отключенная ссылка</span></a></div>
+                        <div class="ui-kit__elements-list"><a class="link" href="#"><span class="link__text">Обычная ссылка</span></a><a class="link link_unerline" href="#"><span class="link__text">Подчеркнутая ссылка</span></a><a class="link link_purple" href="#"><span class="link__text">Ссылка</span></a><a class="link link_gray" href="#"><span class="link__text">Ссылка</span></a><a class="link is-disabled" href="#"><span class="link__text">Отключенная ссылка</span></a></div>
                     </div>
                 </div>
             </section>
@@ -398,24 +398,6 @@
             <section class="ui-kit__section">
                 <div class="ui-kit__section-head">
                     <div class="container">
-                        <h2 class="ui-kit__title">Блок parallax</h2>
-                        <div class="ui-kit__blockpath">
-                            <p>Блок: blocks/parallax/parallax</p>
-                        </div>
-                        <div class="ui-kit__description">
-                            <p>Описание Блока</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="ui-kit__section-content">
-                    <div class="container">
-                        <div class="parallax"></div>
-                    </div>
-                </div>
-            </section>
-            <section class="ui-kit__section">
-                <div class="ui-kit__section-head">
-                    <div class="container">
                         <h2 class="ui-kit__title">Компонент navigation</h2>
                         <div class="ui-kit__blockpath">
                             <p>Компонент: components/navigation/navigation</p>
@@ -427,7 +409,15 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="navigation"></div>
+                        <div class="navigation" data-nav-container="data-nav-container">
+                            <div class="navigation__titles">
+                                <div class="navigation__title" data-nav-title="about">WHO WE ARE</div>
+                                <div class="navigation__title" data-nav-title="services">SERVICES</div>
+                                <div class="navigation__title" data-nav-title="history">HISTORY</div>
+                                <div class="navigation__title" data-nav-title="contacts">contacts</div>
+                            </div>
+                            <div class="navigation__links"><a class="navigation__link js-anchor" href="#about" title="who we are" data-nav-link="about" data-nav-add-class="is-light" data-nav-remove-class=""></a><a class="navigation__link js-anchor" href="#services" title="services" data-nav-link="services" data-nav-add-class="" data-nav-remove-class="is-light"></a><a class="navigation__link js-anchor" href="#history" title="history" data-nav-link="history" data-nav-add-class="" data-nav-remove-class="is-light"></a><a class="navigation__link js-anchor" href="#contacts" title="contacts" data-nav-link="contacts" data-nav-add-class="" data-nav-remove-class="is-light"></a></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -498,7 +488,7 @@
                                     <div class="contacts__links"><a class="link contacts__link" href="tel:+35725057219"><span class="link__text">+357 250 57 219</span></a></div>
                                 </div>
                                 <div class="contacts__item">
-                                    <div class="contacts__name hide-sm">Mail:</div>
+                                    <div class="contacts__name contacts__name_mg hide-sm">Mail:</div>
                                     <div class="contacts__links"><a class="link link_purple contacts__link" href="mailto:vr@amethystjet.net"><span class="link__text">vr@amethystjet.net</span></a><a class="link link_purple contacts__link" href="mailto:info@amethystjet.net"><span class="link__text">info@amethystjet.net</span></a></div>
                                 </div>
                             </div>
