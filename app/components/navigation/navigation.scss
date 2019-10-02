@@ -60,12 +60,10 @@
     text-align: center;
     transition: opacity $ease-main, transform $ease-main;
     opacity: 0;
-    transform: translate3d(0, -15px, 0);
-    transition-delay: .2s;
+    transition-delay: 0;
 
     @include screen('sm') {
       text-align: right;
-      transform: translate3d(0, 15px, 0);
       right: calc(var(--vh, 1vh) * 4.49);
       left: calc(var(--vh, 1vh) * 4.49);
 
@@ -76,9 +74,8 @@
     }
 
     &.is-active {
-      transition-delay: 0s;
+      transition-delay: .2s;
       opacity: 1;
-      transform: translate3d(0, 0, 0);
     }
   }
 

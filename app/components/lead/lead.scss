@@ -38,18 +38,28 @@
       }
 
       &1 {
-        z-index: 4;
+        z-index: 5;
         // transform: translateZ(0);
       }
 
       &0 {
-        z-index: 5;
+        z-index: 6;
+
+        &::before {
+          @include pseudo;
+
+          width: 100%;
+          height: 100vh;
+          background-color: $color-bg;
+          top: calc(100% - 5px);
+          left: 0;
+        }
       }
     }
 
     &_base {
       // display: flex;
-      z-index: 6;
+      z-index: 4;
       transform: translateZ(0);
       box-sizing: border-box;
 
@@ -80,6 +90,7 @@
   &__scrolldown {
     position: absolute;
     left: 0;
+    z-index: 7;
 
     @include rule(position, (xl: absolute, sm: static));
     @include rule(bottom, (xl: 20.7%, md: 16.9%, sm: 9.4%));

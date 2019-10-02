@@ -3,9 +3,15 @@
 
   display: block;
   width: 100%;
+  transition: opacity $ease-main;
 
   .container_inner {
     @include rule(overflow, (xl: hidden, md: visible));
+  }
+
+  &.is-hide {
+    pointer-events: none;
+    opacity: 0 !important;
   }
 
   &__circle {

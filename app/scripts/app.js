@@ -20,6 +20,7 @@ import popups from '../blocks/popups/popups';
 import putBlockIntoSlot from '../blocks/js-functions/put-block-into-slot';
 import parallax from '../components/lead/lead';
 import navigation from '../components/navigation/navigation';
+import hideScrolldown from '../blocks/scrolldown/scrolldown';
 
 const $ = window.$;
 
@@ -45,5 +46,6 @@ $(() => {
   putBlockIntoSlot();
   parallax();
   navigation();
+  hideScrolldown();
 });
 /* eslint-enable */

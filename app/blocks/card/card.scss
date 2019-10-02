@@ -40,5 +40,7 @@
     line-height: 0;
 
     @include fill-img;
+
+    min-height: 120%;
   }
 }
