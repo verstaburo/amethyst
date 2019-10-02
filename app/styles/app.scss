@@ -39,6 +39,7 @@
   display: block;
   width: 100%;
   box-sizing: border-box;
+  min-height: 100vh;
 
   @include rule(padding-bottom, (xl: 4.844vw, lg: 8.1vw, md: 4vw, sm: 6vw));
 

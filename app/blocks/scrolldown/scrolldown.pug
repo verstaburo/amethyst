@@ -2,10 +2,10 @@ mixin scrolldown()
   +b.scrolldown&attributes(attributes)
     .container
       .container.container_inner
-        +e.A.link.js-anchor(href="#services")
-          +e.circle
+        +e.A.link.js-anchor.js-sr_fade_d600(href="#services")
+          +e.circle.js-sr_bottom_d700
             +icon('arrow').__icon
-          +e.text
+          +e.text.js-sr_bottom_d700
             block
 
 mixin ui-kit-scrolldown()

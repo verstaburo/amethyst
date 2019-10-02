@@ -23,16 +23,6 @@
     line-height: 0;
 
     @include rule(margin-left, (sm: -4.53vw));
-
-    &:not(:last-child) {
-      @include rule(margin-bottom, (sm: calc(var(--vh, 1vh) * 6.44), xs: calc(var(--vh, 1vh) * 3.22)));
-
-      @include screen('sm') {
-        @media (orientation: landscape) {
-          margin-bottom: calc(var(--vh, 1vh) * 3.22);
-        }
-      }
-    }
   }
 
   &__image {
@@ -58,12 +48,15 @@
     font-family: $font-header;
 
     @include text-big;
+    @include rule(margin-top, (sm: calc(var(--vh, 1vh) * 6.44), xs: calc(var(--vh, 1vh) * 3.22)));
 
     @include screen('sm') {
       width: 100%;
+      order: 3;
 
       @media (orientation: landscape) {
         font-size: calc(var(--vh, 1vh) * 3.73);
+        margin-top: calc(var(--vh, 1vh) * 3.22);
       }
     }
 
@@ -75,6 +68,7 @@
       @include rule(bottom, (xl: .6em, sm: calc(var(--vh, 1vh) * -4.04), xs: calc(var(--vh, 1vh) * -2.02)));
 
       background-color: $color-white;
+      transition: opacity .5s ease-in;
       opacity: .33;
 
       @include screen('sm') {
@@ -85,6 +79,12 @@
 
       #{$b}_dark & {
         background-color: $color-basic;
+      }
+    }
+
+    &.is-show {
+      &::before {
+        opacity: 0;
       }
     }
 
@@ -103,6 +103,36 @@
     }
   }
 
+  &__end {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: baseline;
+
+    @include screen('sm') {
+      align-self: center;
+      order: 2;
+    }
+
+    &:not(:first-child) {
+      margin-left: auto;
+    }
+  }
+
+  &__lang {
+    display: inline-block;
+    text-transform: uppercase;
+    color: currentColor;
+    font-family: $font-header;
+
+    @include header-3-sm14;
+
+    @include screen('sm') {
+      @media (orientation: landscape) {
+        font-size: calc(var(--vh, 1vh) * 3.73);
+      }
+    }
+  }
+
   &__page {
     box-sizing: border-box;
     background-color: $color-white;
@@ -113,7 +143,7 @@
     @include rule(display, (xl: inline-block, md: none));
 
     &:not(:first-child) {
-      margin-left: auto;
+      @include rule(margin-left, (xl: 2.55vw, lg: 3.59vw));
     }
 
     #{$b}_dark & {

@@ -1,15 +1,15 @@
 mixin navigation()
-  +b.navigation&attributes(attributes)(data-nav-container)
+  +b.navigation&attributes(attributes)(data-nav-container).js-sr_fade
     +e.titles
       +e.title(data-nav-title="about") WHO WE ARE
       +e.title(data-nav-title="services") SERVICES
       +e.title(data-nav-title="history") HISTORY
       +e.title(data-nav-title="contacts") contacts
     +e.links
-      +e.A.link.js-anchor(href="#about" title="who we are" data-nav-link="about" data-nav-add-class="is-light" data-nav-remove-class="")
-      +e.A.link.js-anchor(href="#services" title="services" data-nav-link="services" data-nav-add-class="" data-nav-remove-class="is-light")
-      +e.A.link.js-anchor(href="#history" title="history" data-nav-link="history" data-nav-add-class="" data-nav-remove-class="is-light")
-      +e.A.link.js-anchor(href="#contacts" title="contacts" data-nav-link="contacts" data-nav-add-class="" data-nav-remove-class="is-light")
+      +e.A.link.js-anchor.js-sr_fade_d200(href="#about" title="who we are" data-nav-link="about" data-nav-add-class="is-light" data-nav-remove-class="")
+      +e.A.link.js-anchor.js-sr_fade_d200(href="#services" title="services" data-nav-link="services" data-nav-add-class="" data-nav-remove-class="is-light")
+      +e.A.link.js-anchor.js-sr_fade_d200(href="#history" title="history" data-nav-link="history" data-nav-add-class="" data-nav-remove-class="is-light")
+      +e.A.link.js-anchor.js-sr_fade_d200(href="#contacts" title="contacts" data-nav-link="contacts" data-nav-add-class="" data-nav-remove-class="is-light")
     block
 
 mixin ui-kit-navigation()

@@ -1,16 +1,16 @@
 mixin contacts()
   +b.contacts&attributes(attributes)
-    +e.address Arch. Makariou III, 155, Proteas House, 5th floor, 3026, Limassol, Cyprus
+    +e.address.js-sr_bottom_d200 Arch. Makariou III, 155, Proteas House, 5th floor, 3026, Limassol, Cyprus
     +e.communications
-      +e.item
+      +e.item.js-sr_bottom_d200
         +e.name Phone:
         +e.links
           +link().__link(href="tel:+35725057219") +357 250 57 219
       +e.item
-        +e.name_mg.hide-sm Mail:
+        +e.name_mg.hide-sm.js-sr_bottom_d200 Mail:
         +e.links
-          +link()._purple.__link(href="mailto:vr@amethystjet.net") vr@amethystjet.net
-          +link()._purple.__link(href="mailto:info@amethystjet.net") info@amethystjet.net
+          +link()._purple.__link.js-sr_bottom_d900(href="mailto:vr@amethystjet.net") vr@amethystjet.net
+          +link()._purple.__link.js-sr_bottom_d900(href="mailto:info@amethystjet.net") info@amethystjet.net
     block
 
 mixin ui-kit-contacts()
