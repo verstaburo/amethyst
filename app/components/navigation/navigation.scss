@@ -9,6 +9,7 @@
   box-sizing: border-box;
   color: $color-basic;
   transition: color $ease-main;
+  overscroll-behavior: none;
 
   @include rule(padding-left, (xl: 4.01vw, lg: 5.637vw, md: 4vw, sm: 0));
   @include rule(left, (xl: 7.29vw, lg: 3.44vw, md: 2.8vw, sm: auto));
