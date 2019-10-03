@@ -90,26 +90,26 @@
     position: relative;
     display: block;
 
-    @include rule(width, (xl: 1.875vw, lg: 2.63vw, md: 3.6vw, sm: 4.8vw));
-    @include rule(min-width, (xl: 1.875vw, lg: 2.63vw, md: 3.6vw, sm: 4.8vw));
-    @include rule(height, (xl: 1.875vw, lg: 2.63vw, md: 3.6vw, sm: 4.8vw));
+    @include rule(width, (xl: 36px, sm: 18px));
+    @include rule(min-width, (xl: 36px, sm: 18px));
+    @include rule(height, (xl: 36px, sm: 18px));
 
-    @include screen('sm') {
-      @media (orientation: landscape) {
-        width: calc(var(--vh, 1vh) * 4.8);
-        min-width: calc(var(--vh, 1vh) * 4.8);
-        height: calc(var(--vh, 1vh) * 4.8);
-      }
-    }
+    // @include screen('sm') {
+    //   @media (orientation: landscape) {
+    //     width: calc(var(--vh, 1vh) * 4.8);
+    //     min-width: calc(var(--vh, 1vh) * 4.8);
+    //     height: calc(var(--vh, 1vh) * 4.8);
+    //   }
+    // }
 
     &:not(:last-child) {
-      @include rule(margin-bottom, (xl: .364vw, lg: .512vw, md: .7vw, sm: 1.07vw));
+      @include rule(margin-bottom, (xl: 7px, sm: 4px));
 
-      @include screen('sm') {
-        @media (orientation: landscape) {
-          margin-bottom: calc(var(--vh, 1vh) * 1.07);
-        }
-      }
+      // @include screen('sm') {
+      //   @media (orientation: landscape) {
+      //     margin-bottom: calc(var(--vh, 1vh) * 1.07);
+      //   }
+      // }
     }
 
     &::before, &::after {
@@ -124,21 +124,20 @@
     }
 
     &::before {
-      @include rule(width, (xl: .364vw, lg: .512vw, md: .7vw, sm: 1.07vw));
-      @include rule(height, (xl: .364vw, lg: .512vw, md: .7vw, sm: 1.07vw));
-      @include rule(min-height, (xl: .364vw, lg: .512vw, md: .7vw, sm: 1.07vw));
-      @include rule(top, (xl: .729vw, lg: 1.025vw, md: 1.4vw, sm: 1.87vw));
-      @include rule(left, (xl: .729vw, lg: 1.025vw, md: 1.4vw, sm: 1.87vw));
+      @include rule(width, (xl: 7px, sm: 4px));
+      @include rule(height, (xl: 7px, sm: 4px));
+      @include rule(top, (xl: 14px, sm: 7px));
+      @include rule(left, (xl: 14px, sm: 7px));
 
-      @include screen('sm') {
-        @media (orientation: landscape) {
-          width: calc(var(--vh, 1vh) * 1.07);
-          height: calc(var(--vh, 1vh) * 1.07);
-          min-height: calc(var(--vh, 1vh) * 1.07);
-          top: calc(var(--vh, 1vh) * 1.87);
-          left: calc(var(--vh, 1vh) * 1.87);
-        }
-      }
+      // @include screen('sm') {
+      //   @media (orientation: landscape) {
+      //     width: calc(var(--vh, 1vh) * 1.07);
+      //     height: calc(var(--vh, 1vh) * 1.07);
+      //     min-height: calc(var(--vh, 1vh) * 1.07);
+      //     top: calc(var(--vh, 1vh) * 1.87);
+      //     left: calc(var(--vh, 1vh) * 1.87);
+      //   }
+      // }
     }
 
     &::after {
@@ -146,21 +145,20 @@
       opacity: 0;
       transform: scale(.5);
 
-      @include rule(width, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 2.134vw));
-      @include rule(height, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 2.134vw));
-      @include rule(min-height, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 2.134vw));
-      @include rule(top, (xl: .52vw, lg: .732vw, md: 1vw, sm: 1.34vw));
-      @include rule(left, (xl: .52vw, lg: .732vw, md: 1vw, sm: 1.34vw));
+      @include rule(width, (xl: 15px, sm: 8px));
+      @include rule(height, (xl: 15px, sm: 8px));
+      @include rule(top, (xl: 10px, sm: 5px));
+      @include rule(left, (xl: 10px, sm: 5px));
 
-      @include screen('sm') {
-        @media (orientation: landscape) {
-          width: calc(var(--vh, 1vh) * 2.134);
-          height: calc(var(--vh, 1vh) * 2.134);
-          min-height: calc(var(--vh, 1vh) * 2.134);
-          top: calc(var(--vh, 1vh) * 1.34);
-          left: calc(var(--vh, 1vh) * 1.34);
-        }
-      }
+      // @include screen('sm') {
+      //   @media (orientation: landscape) {
+      //     width: calc(var(--vh, 1vh) * 2.134);
+      //     height: calc(var(--vh, 1vh) * 2.134);
+      //     min-height: calc(var(--vh, 1vh) * 2.134);
+      //     top: calc(var(--vh, 1vh) * 1.34);
+      //     left: calc(var(--vh, 1vh) * 1.34);
+      //   }
+      // }
     }
 
     &:hover {

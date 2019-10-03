@@ -27,10 +27,15 @@
   }
 
   &_text {
-    max-width: none;
+    @include screen('xl', min) {
+      padding-left: 14.48vw;
+      padding-right: 14.48vw;
+      max-width: none;
+    }
 
-    @include rule(padding-left, (xl: 14.48vw, lg: 6.59vw, md: 9vw, sm: 0));
-    @include rule(padding-right, (xl: 14.48vw, lg: 6.59vw, md: 9vw, sm: 0));
+    @include rule(max-width, (xl: 1240px, lg: none));
+    @include rule(padding-left, (xl: 90px, lg: 6.59vw, md: 9vw, sm: 0));
+    @include rule(padding-right, (xl: 90px, lg: 6.59vw, md: 9vw, sm: 0));
   }
 }
 
