@@ -9,10 +9,10 @@ html(lang='en')
     - var hdc = headerDark || false
     - var isFooter = noFooter || false
     - var pg = currpage || ''
-    if hdc
-      +header-dark(pg)
-    else
-      +header._abs(pg)
+    //- if hdc
+    //-   +header-dark(pg)
+    //- else
+    //-   +header._abs(pg)
     +b.MAIN.page
       block content
     if !isFooter
