@@ -17,7 +17,7 @@
     @include rule(right, (xl: 2.71vw, lg: 3.81vw, md: 6.2vw));
 
     position: absolute;
-    color: $color-white;
+    color: $color-bg;
     z-index: 2;
     margin: 0;
     padding: 0;
@@ -41,6 +41,6 @@
 
     @include fill-img;
 
-    min-height: 120%;
+    min-height: 140%;
   }
 }

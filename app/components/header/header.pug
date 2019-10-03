@@ -6,9 +6,6 @@ mixin header(page)
       +e.slogan.js-sr_right_d200 Your business aviation insider
       +e.end.js-sr_right_d200
         +link.__lang(href="#") Ru
-        if page
-        +e.page!=page
-    block
 
 mixin header-dark(page)
   +b.HEADER.header_dark&attributes(attributes)
@@ -18,8 +15,6 @@ mixin header-dark(page)
       +e.slogan Amethyst Jet - your business aviation insider
       +e.end
         +link.__lang(href="#") Ru
-        if page
-          +e.page!=page
     block
 
 mixin ui-kit-header()

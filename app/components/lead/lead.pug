@@ -1,16 +1,14 @@
 mixin lead()
   +b.SECTION.lead&attributes(attributes)
-    +e.layer_back4(smooth-parallax start-position-y="0" end-position-y="1.5")
+    +e.layer_back4.parallax(data-speed="2")
       +e.IMG.image(src="assets/images/parallax-layer-4.jpg")
-    +e.layer_back3(smooth-parallax start-position-y="0" end-position-y="1")
+    +e.layer_back3.parallax(data-speed="36")
       +e.IMG.image(src="assets/images/parallax-layer-3.png")
-    +e.layer_back2(smooth-parallax start-position-y="0" end-position-y=".6")
+    +e.layer_back2.parallax(data-speed="49")
       +e.IMG.image(src="assets/images/parallax-layer-2.png")
-    +e.layer_back1(smooth-parallax start-position-y="0" end-position-y=".2")
+    +e.layer_back1.parallax(data-speed="100")
       +e.IMG.image(src="assets/images/parallax-layer-1.png")
-    +e.layer_back0(smooth-parallax start-position-y="0" end-position-y="-.2")
-      +e.IMG.image(src="assets/images/parallax-layer-0.png")
-    +e.layer_base(smooth-parallax start-position-y="0" end-position-y="1.5")
+    +e.layer_base.parallax(data-speed="11")
       .container
         .container.container_inner
           +e.H1.title.js-sr_fade_d800 Consistent impeccable round&#8209;the&#8209;clock service
