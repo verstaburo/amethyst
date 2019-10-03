@@ -88,9 +88,8 @@
     left: 0;
     z-index: 7;
 
-    @include rule(position, (xl: absolute, sm: static));
     @include rule(bottom, (xl: 20.7%, md: 16.9%, sm: 9.4%));
-    @include rule(margin-top, (sm: calc(var(--vh, 1vh) * 6.29), xs: calc(var(--vh, 1vh) * 3.14)));
+    // @include rule(margin-top, (sm: calc(var(--vh, 1vh) * 6.29), xs: calc(var(--vh, 1vh) * 3.14)));
   }
 
   .container {
