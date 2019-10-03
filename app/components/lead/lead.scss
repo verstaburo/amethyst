@@ -11,14 +11,15 @@
   @include rule(padding-top, (xl: 56.6%, lg: 79.57%, md: 89.1%, sm: 177.87%));
 
   &__layer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     display: block;
     font-size: 0;
     line-height: 0;
+
+    @include rule(padding-top, (xl: 56.6%, lg: 79.57%, md: 89.1%, sm: 177.87%));
 
     &_back {
 
@@ -35,18 +36,8 @@
       }
 
       &1 {
+        position: absolute;
         z-index: 5;
-
-        &::before {
-          @include pseudo;
-
-          width: 100%;
-          height: 400vh;
-          background-color: $color-bg;
-          top: 100%;
-          left: 0;
-          z-index: 1;
-        }
       }
     }
 
