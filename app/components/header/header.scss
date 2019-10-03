@@ -6,8 +6,8 @@
   box-sizing: border-box;
   width: 100%;
 
-  @include rule(padding-top, (xl: 3.49vw, lg: 4.9vw, md: 6.7vw, sm: calc(var(--vh, 1vh) * 3.44)));
-  @include rule(padding-bottom, (xl: 3.49vw, lg: 4.9vw, md: 6.7vw, sm: calc(var(--vh, 1vh) * 3.44)));
+  @include rule(padding-top, (xl: 3.49vw, lg: 4.9vw, md: 6.7vw, sm: 6.4vw));
+  @include rule(padding-bottom, (xl: 3.49vw, lg: 4.9vw, md: 6.7vw, sm: 6.4vw));
 
   .container {
     display: flex;
@@ -34,11 +34,11 @@
     @include rule(height, (xl: 4.17vw, lg: 5.86vw, md: 8vw, sm: 12vw));
     @include rule(margin-bottom, (xl: -1.35vw, lg: -1.9vw, md: -2.6vw, sm: 0));
 
-    @include screen('sm') {
-      @media (orientation: landscape) {
-        height: calc(var(--vh, 1vh) * 12);
-      }
-    }
+    // @include screen('sm') {
+    //   @media (orientation: landscape) {
+    //     height: calc(var(--vh, 1vh) * 12);
+    //   }
+    // }
   }
 
   &__slogan {
@@ -48,34 +48,34 @@
     font-family: $font-header;
 
     @include text-big;
-    @include rule(margin-top, (sm: calc(var(--vh, 1vh) * 6.44), xs: calc(var(--vh, 1vh) * 3.22)));
+    @include rule(margin-top, (sm: 11.2vw));
 
     @include screen('sm') {
       width: 100%;
       order: 3;
 
-      @media (orientation: landscape) {
-        font-size: calc(var(--vh, 1vh) * 3.73);
-        margin-top: calc(var(--vh, 1vh) * 3.22);
-      }
+      // @media (orientation: landscape) {
+      //   font-size: calc(var(--vh, 1vh) * 3.73);
+      //   margin-top: calc(var(--vh, 1vh) * 3.22);
+      // }
     }
 
     &::before {
       @include pseudo;
-      @include rule(height, (xl: 6.3vw, lg: 8.86vw, md: 12.1vw, sm: calc(var(--vh, 1vh) * .15)));
-      @include rule(width, (xl: .052vw, lg: .073vw, md: .1vw, sm: 8vw));
+      @include rule(height, (xl: 6.3vw, lg: 8.86vw, md: 12.1vw, sm: 1px));
+      @include rule(width, (xl: 1px, sm: 8vw));
       @include rule(left, (xl: -2.55vw, lg: -3.59vw, md: -4.9vw, sm: 0));
-      @include rule(bottom, (xl: .6em, sm: calc(var(--vh, 1vh) * -4.04), xs: calc(var(--vh, 1vh) * -2.02)));
+      @include rule(bottom, (xl: .6em, sm: -7.2vw));
 
       background-color: $color-white;
       transition: opacity .5s ease-in;
       opacity: .33;
 
-      @include screen('sm') {
-        @media (orientation: landscape) {
-          bottom: calc(var(--vh, 1vh) * -2.02);
-        }
-      }
+      // @include screen('sm') {
+      //   @media (orientation: landscape) {
+      //     bottom: calc(var(--vh, 1vh) * -2.02);
+      //   }
+      // }
 
       #{$b}_dark & {
         background-color: $color-basic;
@@ -95,11 +95,11 @@
     #{$b}_dark & {
       @include text-big-xl16;
 
-      @include screen('sm') {
-        @media (orientation: landscape) {
-          font-size: calc(var(--vh, 1vh) * 4.267);
-        }
-      }
+      // @include screen('sm') {
+      //   @media (orientation: landscape) {
+      //     font-size: calc(var(--vh, 1vh) * 4.267);
+      //   }
+      // }
     }
   }
 
@@ -126,11 +126,11 @@
 
     @include header-3-sm14;
 
-    @include screen('sm') {
-      @media (orientation: landscape) {
-        font-size: calc(var(--vh, 1vh) * 3.73);
-      }
-    }
+    // @include screen('sm') {
+    //   @media (orientation: landscape) {
+    //     font-size: calc(var(--vh, 1vh) * 3.73);
+    //   }
+    // }
   }
 
   &__page {
