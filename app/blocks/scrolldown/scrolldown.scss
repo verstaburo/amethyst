@@ -15,7 +15,6 @@
   }
 
   &__circle {
-    @include rule(border-width, (xl: .052vw, lg: .073, md: .1vw, sm: .267vw));
     @include rule(width, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 3.4vw));
     @include rule(min-width, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 3.4vw));
     @include rule(height, (xl: .78vw, lg: 1.1vw, md: 1.5vw, sm: 3.4vw));
@@ -27,6 +26,7 @@
     border-style: solid;
     border-color: currentColor;
     box-sizing: border-box;
+    border-width: 1px;
 
     @include screen('sm') {
       @media (orientation: landscape) {
@@ -88,11 +88,11 @@
 
     &::before, &::after {
       @include pseudo;
-      @include rule(height, (xl: .052vw, lg: .073, md: .1vw, sm: .267vw));
 
       top: 50%;
       background-color: currentColor;
       transition: transform .5s ease-in;
+      height: 1px;
     }
 
     &::before {
