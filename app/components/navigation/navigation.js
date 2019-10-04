@@ -27,7 +27,7 @@ export default function navigation() {
 
   function updateSectionParam(el) {
     const name = el.getAttribute('id');
-    const top = $(el).position().top;
+    const top = $(el).offset().top;
     const height = $(el).outerHeight(true);
     const bottom = top + height;
     window.pageSections[name] = {

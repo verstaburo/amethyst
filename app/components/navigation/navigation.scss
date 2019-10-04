@@ -27,48 +27,65 @@
 
   &__titles {
     position: absolute;
-    top: 100%;
-    display: block;
+    // top: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     transform-origin: 0 0 0;
-    transform: rotate(-90deg);
+    align-items: flex-start;
+    // transform: rotate(-90deg);
     left: 0;
     box-sizing: border-box;
 
-    @include rule(width, (xl: calc(var(--vh, 1vh) * 100)));
-    @include rule(height, (xl: 1.5625vw, lg: 2.196vw, md: 3vw, sm: 4.8vw));
+    // @include rule(width, (xl: calc(var(--vh, 1vh) * 100)));
+    // @include rule(height, (xl: 1.5625vw, lg: 2.196vw, md: 3vw, sm: 4.8vw));
+    @include rule(height, (xl: 100%));
+    @include rule(width, (xl: 1.5625vw, lg: 2.196vw, md: 3vw, sm: 4.8vw));
 
     @include screen('sm') {
+      justify-content: flex-start;
+
       @media (orientation: landscape) {
-        height: calc(var(--vh, 1vh) * 4.8);
+        // height: calc(var(--vh, 1vh) * 4.8);
+        width: calc(var(--vh, 1vh) * 4.8);
       }
     }
 
-    .is-ie & {
-      width: 100vh;
-    }
+    // .is-ie & {
+    //   width: 100vh;
+    // }
   }
 
   &__title {
     @include text-micro;
 
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 50%;
+    right: 50%;
+    // right: 0;
+    // bottom: 0;
     display: block;
+    white-space: nowrap;
     font-weight: 400;
     text-align: center;
     transition: opacity $ease-main, transform $ease-main;
     opacity: 0;
     transition-delay: 0;
+    transform-origin: 50% 50% 0;
+    transform: translate3d(50%, -50%, 0) rotate(-90deg);
 
     @include screen('sm') {
+      right: 50%;
+      top: 5.34vw;
+      transform-origin: 100% 50% 0;
+      transform: translate3d(0, 0, 0) rotate(-90deg);
       text-align: right;
-      right: calc(var(--vh, 1vh) * 4.49);
-      left: calc(var(--vh, 1vh) * 4.49);
+      // right: calc(var(--vh, 1vh) * 4.49);
+      // left: calc(var(--vh, 1vh) * 4.49);
 
       @media (orientation: landscape) {
+        top: calc(var(--vh, 1vh) * 4.49);
         font-size: calc(var(--vh, 1vh) * 2.13);
         line-height: calc(var(--vh, 1vh) * 4.8);
       }
