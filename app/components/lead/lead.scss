@@ -18,6 +18,7 @@
     display: block;
     font-size: 0;
     line-height: 0;
+    pointer-events: none;
 
     @include rule(padding-top, (xl: 56.6%, lg: 79.57%, md: 89.1%, sm: 177.87%));
 
@@ -28,6 +29,7 @@
       }
 
       &H {
+        pointer-events: auto;
         z-index: 2;
       }
 
