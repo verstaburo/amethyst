@@ -54,11 +54,15 @@
       box-sizing: border-box;
       height: 100vh;
 
-      @include rule(display, (xl: flex, sm: block));
+      @include rule(display, (xl: flex, md: block));
       @include rule(height, (xl: 100vh, sm: 100%));
       // @include rule(padding-top, (xl: 20.2vw, lg: 28.4vw, md: 32vw, sm: 51.2vw));
-      @include rule(padding-top, (xl: 10.42vw, lg: 14.64vw, md: 20vw, sm: 51.2vw));
+      @include rule(padding-top, (xl: 10.42vw, lg: 14.64vw, md: 32vw, sm: 51.2vw));
       @include rule(padding-bottom, (xl: 10.42vw, lg: 14.64vw, md: 20vw, sm: 0));
+
+      @media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1199px) and (max-height: 700px) {
+        padding-top: 20vw;
+      }
 
       // @include screen('sm') {
       //   @media (orientation: landscape) {
